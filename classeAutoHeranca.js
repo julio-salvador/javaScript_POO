@@ -11,14 +11,13 @@ class Automovel {
 }
 
 class Carro extends Automovel {
-  constructor(marca, modelo, ano, portas, quilometragem) {
+  constructor(marca, modelo, ano, portas) {
     super(marca, modelo, ano);
     this.portas = portas;
-    this.quilometragem = quilometragem;
   }
 
   exibirDetalhes() {
-    return `${super.exibirDetalhes()}, portas: ${this.portas}, Km: ${this.quilometragem}`;
+    return `${super.exibirDetalhes()}, Portas: ${this.portas}`;
   }
 }
 
@@ -29,13 +28,13 @@ class Moto extends Automovel {
   }
 
   exibirDetalhes() {
-    return `${super.exibirDetalhes()}, cilindrada: ${this.cilindrada}`;
+    return `${super.exibirDetalhes()}, Cilindrada: ${this.cilindrada}`;
   }
 }
 
 // Instâncias
-let moto1 = new Moto("Suzuki", "GSX-8R", 2027, 776);
+let moto1 = new Moto("Yamaha", "Yamaha R15", 2025, 155);
 console.log(moto1.exibirDetalhes()); 
 
-let carro1 = new Carro("Lincoln", "Mark III", 1958, 4, 120000);
+let carro1 = new Carro("Nissan", "Skyline R34", 1999, 4, 120000);
 console.log(carro1.exibirDetalhes()); 
