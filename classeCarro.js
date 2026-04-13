@@ -1,16 +1,15 @@
 class Carro{
-    constructor(katchau, marca, ano, quilometragem){
-        this.katchau = katchau;
+    constructor(marca, ano,modelo){
         this.marca = marca;
         this.ano = ano;
-        this.quilometragem = quilometragem;
+        this.modelo = modelo;
     }
 
-    saudar(){
-        console.log(` ${this.katchau}, ${this.marca}, ${this.ano}, ${this.quilometragem}.`);
+    katchau(){
+        console.log(`${this.marca}, ${this.ano}, ${this.modelo}.`);
     }
 }
 
-let carro1 = new Carro("katchau", "Mazda", 2006, 3333);
-carro1.saudar();
+let carro1 = new Carro("Mazda", 2006, "Mazda RX-7");
+carro1.katchau();
 
